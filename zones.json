@@ -1,0 +1,14 @@
+{
+    "zone1": {
+        "fr": {
+            "nom": "Salle 101",
+            "description": "Salle de cours principale.",
+            "images": ["salle101_1.jpg", "salle101_2.jpg"]
+        },
+        "en": {
+            "nom": "Room 101",
+            "description": "Main classroom.",
+            "images": ["salle101_1.jpg", "salle101_2.jpg"]
+        }
+    }
+}

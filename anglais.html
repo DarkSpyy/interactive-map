@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Map - La Providence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="initCanvas()">
+    <header>
+        <h1 id="title">Interactive Map of La Providence</h1>
+        <div class="language-buttons">
+            <button onclick="changeLanguage('fr')">Français</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="map-container">
+            <img id="map" src="images/plan.png" usemap="#planMap" alt="Map of the facility">
+            <canvas id="overlay-canvas"></canvas>
+            <div id="tooltip" style="display: none; position: absolute; background-color: black; border: 1px solid #ccc; padding: 5px; border-radius: 5px; z-index: 100;"></div>
+            <map name="planMap">
+                <area shape="rect" coords="232,169,356,144" href="#"
+                      onmouseover="highlightZone('232,169,356,144', 'rect')" 
+                      onmouseout="clearCanvas()" 
+                      onclick="redirectToPage('primary.html')"
+                      alt="zone1">
+            </map>
+        </div>
+
+        <p id="monParagraphe">Primary</p>
+
+        <section id="info-section">
+            <h2 id="zone-name"></h2>
+            <p id="zone-description"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

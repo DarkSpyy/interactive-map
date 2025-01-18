@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>École Primaire - Description</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function translateToEnglish() {
+            document.getElementById("header-title").innerText = "Primary School";
+            document.getElementById("introduction-title").innerText = "Welcome to the Primary School";
+            document.getElementById("introduction-text").innerText = 
+                "The primary school offers a welcoming and stimulating environment for children. " +
+                "It promotes the development of their academic, social, and artistic skills " +
+                "through adapted and diverse spaces.";
+            document.getElementById("gallery-title").innerText = "Photo Gallery";
+            document.querySelectorAll(".photo p")[0].innerText = 
+                "Bright and well-equipped classroom for learning.";
+            document.querySelectorAll(".photo p")[1].innerText = 
+                "The primary school's cafeteria.";
+            document.querySelectorAll(".photo p")[2].innerText = 
+                "Warm and decorated hallway, with coat storage for students.";
+            document.getElementById("info-title").innerText = "Key Information";
+            document.querySelectorAll("#information ul li")[0].innerHTML = 
+                "<strong>Schedule:</strong> Monday to Friday, from 8:30 AM to 4:30 PM.";
+            document.querySelectorAll("#information ul li")[1].innerHTML = 
+                "<strong>Address:</strong> 146 Boulevard de Saint-Quentin, Amiens, France.";
+            document.querySelectorAll("#information ul li")[2].innerHTML = 
+                "<strong>Contact:</strong> laprovidence.amiens@ac-amiens.fr - 03 22 33 77 77.";
+            document.querySelector("footer p").innerText = 
+                "© 2025 Primary School. All rights reserved.";
+        }
+
+        function translateToFrench() {
+            document.getElementById("header-title").innerText = "École Primaire";
+            document.getElementById("introduction-title").innerText = "Bienvenue à l'École Primaire";
+            document.getElementById("introduction-text").innerText = 
+                "L'école primaire offre un environnement accueillant et stimulant pour les enfants. " +
+                "Elle favorise le développement de leurs compétences académiques, sociales et artistiques " +
+                "à travers des espaces adaptés et diversifiés.";
+            document.getElementById("gallery-title").innerText = "Galerie de Photos";
+            document.querySelectorAll(".photo p")[0].innerText = 
+                "Salle de classe lumineuse et équipée pour l'apprentissage.";
+            document.querySelectorAll(".photo p")[1].innerText = 
+                "La cantine de la primaire.";
+            document.querySelectorAll(".photo p")[2].innerText = 
+                "Couloir chaleureux et décoré, avec des rangements pour les manteaux des élèves.";
+            document.getElementById("info-title").innerText = "Informations Clés";
+            document.querySelectorAll("#information ul li")[0].innerHTML = 
+                "<strong>Horaires :</strong> Lundi au vendredi, de 8h30 à 16h30.";
+            document.querySelectorAll("#information ul li")[1].innerHTML = 
+                "<strong>Adresse :</strong> 146 Boulevard de Saint-Quentin, Amiens, France.";
+            document.querySelectorAll("#information ul li")[2].innerHTML = 
+                "<strong>Contact :</strong> laprovidence.amiens@ac-amiens.fr - 03 22 33 77 77.";
+            document.querySelector("footer p").innerText = 
+                "© 2025 École Primaire. Tous droits réservés.";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1 id="header-title">École Primaire</h1>
+        <div class="language-buttons">
+            <button onclick="translateToFrench()">Français</button>
+            <button onclick="translateToEnglish()">English</button>
+            <button onclick="location.href='index.html'">Retour à l'accueil</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="introduction">
+            <h2 id="introduction-title">Bienvenue à l'École Primaire</h2>
+            <p id="introduction-text">
+                L'école primaire offre un environnement accueillant et stimulant pour les enfants. 
+                Elle favorise le développement de leurs compétences académiques, sociales et artistiques 
+                à travers des espaces adaptés et diversifiés.
+            </p>
+        </section>
+
+        <section id="photo-gallery">
+            <h2 id="gallery-title">Galerie de Photos</h2>
+            
+            <div class="photo">
+                <img src="images/1.jpg" alt="Salle de classe - Vue 1" width="300">
+                <p>Salle de classe lumineuse et équipée pour l'apprentissage.</p>
+            </div>
+
+            <div class="photo">
+                <img src="images/cantine.jpg" alt="Salle de classe - Vue 2" width="300">
+                <p>La cantine de la primaire.</p>
+            </div>
+
+            <div class="photo">
+                <img src="images/2.jpg" alt="Couloir de l'école" width="300">
+                <p>Couloir chaleureux et décoré, avec des rangements pour les manteaux des élèves.</p>
+            </div>
+        </section>
+
+        <section id="information">
+            <h2 id="info-title">Informations Clés</h2>
+            <ul>
+                <li><strong>Adresse :</strong> 146 Boulevard de Saint-Quentin, Amiens, France.</li>
+                <li><strong>Contact :</strong> laprovidence.amiens@ac-amiens.fr - 03 22 33 77 77.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 École Primaire. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>

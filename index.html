@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte Interactive - La Providence</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="initCanvas()">
+    <header>
+        <h1 id="title">Carte Interactive de La Providence</h1>
+        <div class="language-buttons">
+            <button onclick="changeLanguage('fr')">Français</button>
+            <button onclick="changeLanguage('en')">English</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="map-container">
+            <img id="map" src="images/plan.png" usemap="#planMap" alt="Plan de l'établissement">
+            <canvas id="overlay-canvas"></canvas>
+            <div id="tooltip" style="display: none; position: absolute; background-color: black; border: 1px solid #ccc; padding: 5px; border-radius: 5px; z-index: 100;"></div>
+            <map name="planMap">
+                <area shape="rect" coords="232,169,356,144" href="#"
+                      onmouseover="highlightZone('232,169,356,144', 'rect')" 
+                      onmouseout="clearCanvas()" 
+                      onclick="redirectToPage('primaire.html')"
+                      alt="zone1">
+            </map>
+        </div>
+
+        <p id="monParagraphe">Primaire</p>
+
+
+
+        <section id="info-section">
+            <h2 id="zone-name"></h2>
+            <p id="zone-description"></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    const translations = {
+        fr: {
+            title: "Carte Interactive de La Providence",
+            mapAlt: "Plan de l'établissement",
+            paragraph: "Primaire",
+            zoneName: "",
+            zoneDescription: ""
+        },
+        en: {
+            title: "Interactive Map of La Providence",
+            mapAlt: "Map of the facility",
+            paragraph: "Primary",
+            zoneName: "",
+            zoneDescription: ""
+        }
+    };
+
+
+    function changeLanguage(lang) {
+        document.getElementById("title").textContent = translations[lang].title;
+        document.getElementById("map").alt = translations[lang].mapAlt;
+        document.getElementById("monParagraphe").textContent = translations[lang].paragraph;
+        document.getElementById("zone-name").textContent = translations[lang].zoneName;
+        document.getElementById("zone-description").textContent = translations[lang].zoneDescription;
+    }
+</script>
